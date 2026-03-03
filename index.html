@@ -120,4 +120,62 @@
 </script>
 
 </body>
+</html>        }
+
+        h1 {
+            font-family: 'Pinyon Script', cursive;
+            white-space: nowrap;
+            font-size: clamp(1.8rem, 10vw, 3.5rem);
+            color: var(--bleu-royal);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--bleu-royal);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(43, 87, 154, 0.3);
+        }
+
+        .btn:hover {
+            background-color: var(--bleu-profond);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div id="global-page-content">
+    <div class="card-wrapper">
+        <div class="photo-container">
+            <img src="logoFleur.png" alt="Logo">
+        </div>
+
+        <h1>Yvette & Daniel</h1>
+
+        <a href="invitation.html" class="btn" id="open-btn">Voir l'invitation</a>
+    </div>
+</div>
+
+<script>
+    document.getElementById('open-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('global-page-content').classList.add('page-turn-active');
+        setTimeout(() => {
+            window.location.href = this.getAttribute('href');
+        }, 1400);
+    });
+</script>
+
+</body>
 </html>
